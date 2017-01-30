@@ -14,9 +14,38 @@
     </div>
 </nav>
 
+<!-- Button to post an ad -->
 <main class="container">
-<div class="pull-left">
-  <p><a class="btn btn-info" ng-click="$ctrl.toggleForm()">New Ad</a></p>
+    <div class="pull-left">
+        <p><a class="btn btn-info" ng-click="$ctrl.toggleForm()">New Ad</a></p>
+    </div>
+
+<!-- Filter -->
+    <ul class="nav nav-pills">
+        <li role="presentation" class="active">
+            <input type="search" class="form-control input-sm search-form" placeholder="Filter" ng-model="search">
+        </li>
+
+<!-- Sort by Posted Date or Price -->
+        <li class="dropdown" ng-init="sort='-price'; sortName='Price'">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sort by {{sortName}}<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a ng-click="sort='postedDate'; sortName='Posted-Date'">Posted Date</a></li>
+                <li><a ng-click="sort='price'; sortName='Price'">Price</a></li>
+            </ul>
+        </li>
+    </ul>
+
+<!-- Create post -->
+<div class="row" ng-if="$ctrl.formActive">
+<div class="col-md-8">
+  <form name="form" novalidate ng-submit="$ctrl.createAd()">
+    <div ng-class="{'form-group': true, 'error': form.body.$invalid && form.body.$touched}">
+
+    </div>
+  </form>
+
 </div>
 
+</div>
 </main>

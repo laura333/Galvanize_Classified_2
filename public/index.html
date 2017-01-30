@@ -1,23 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
-
-<head>
+<html ng-app="app">
+  <head>
     <base href="/">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
     <title>Galvanize Classifieds</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/css/app.css">
-</head>
+  </head>
+  <body>
 
-<body>
-
-    <ads></ads>
-    <!-- <ui-view></ui-view> -->
+    <ui-view></ui-view>
+    <!-- <ads></ads> -->
 
     <!-- load jQuery  -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
     <!-- load bootstrap -->
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
@@ -26,12 +20,23 @@
     <!-- load angular-->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
 
+    <!-- load momentJS (required for angular-moment) -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+
+    <!-- load angular-moment -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-moment/0.9.0/angular-moment.min.js"></script>
+
     <!-- load ui-router  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+    <script src="https://unpkg.com/angular-ui-router@1.0.0-beta.3/release/angular-ui-router.js"></script>
+    <script src="/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
 
-    <script type="text/javascript" src="app.module.js"></script>
-    <script type="text/javascript" src="/ads/ads.component.js"></script>
+    <!-- app scripts -->
+    <script src="public/app.module.js"></script>
+    <script src="public/app.config.js"></script>
+    <script src="public/app.component.js"></script>
+    <script src="public/home/home.component.js"></script>
+    <script src="public/edit/edit.component.js"></script>
+    <script src="public/new/new.component.js"></script>
 
-</body>
-
+  </body>
 </html>
