@@ -24,7 +24,7 @@
                 component: 'home'
             })
             .state({
-              name: 'editPost',
+              name: 'editAd',
               parent: 'app',
               url: '/edit',
               component: 'edit',
@@ -33,7 +33,7 @@
               }
             })
             .state({
-              name: 'newPost',
+              name: 'createAd',
               parent: 'app',
               url: '/new',
               component: 'new'
