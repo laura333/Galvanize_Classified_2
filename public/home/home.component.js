@@ -14,7 +14,8 @@
         const vm = this;
         vm.$onInit = onInit;
         vm.showAds = showAds;
-        vm.createAd = {};
+        vm.createAd = createAd;
+        // vm.createAd = {};
         vm.editAd = editAd;
         vm.deleteAd = deleteAd;
         vm.updateSort = updateSort;

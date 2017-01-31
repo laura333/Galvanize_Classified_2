@@ -5,7 +5,7 @@
   .module('app')
   .component('app', {
     controller: controller,
-    templateUrl: './app.template.html'
+    templateUrl: 'app.template.html'
   });
 
 function controller() {

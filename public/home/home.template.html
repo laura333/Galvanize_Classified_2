@@ -14,11 +14,11 @@
 <!-- sort ads -->
 <div class="row">
   <h5>Sort Ads</h5>
-  <button type="button" name="button" ng-click="$ctrl.updateSort('-date')">Sort By Date Posted</button>
-  <button type="button" name="button" ng-click="$ctrl.updateSort('price')">Sort By Price</button>
+  <button type="button" name="button" ng-click="$ctrl.updateSort('-date')">Sort by Date Posted</button>
+  <button type="button" name="button" ng-click="$ctrl.updateSort('price')">Sort by Price</button>
 </div>
 
-<div ng-repeat="ad in $ctrl.ad | filter : searchText | orderBy : $ctrl.sortCriteria">
+<div ng-repeat="ad in $ctrl.ads | filter : searchText | orderBy : $ctrl.sortCriteria">
   <div class="row">
     <h3>{{ad.id}}: {{ad.title}}</h3>
     <h4>Price: {{ad.price}}</h4>
@@ -29,5 +29,4 @@
   </div>
   <button type="button" name="delete_ad" ng-click="$ctrl.deleteAd(ad.id)">Delete Ad</button>
   <button type="button" name="edit_ad" ng-click="$ctrl.editAd(ad)">Edit Ad</button>
-  <hr>
 </div>
