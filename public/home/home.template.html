@@ -1,26 +1,28 @@
 <h3>This is the home component.</h3>
 
+<!-- button to create a new ad -->
 <div class="row">
   <button type="button" name="button" ng-click="$ctrl.createAd()">New Ad</button>
 </div>
 
+<!-- filter ads -->
 <div class="row">
   <h5>Filter Ads</h5>
-  <input name="search" ng-model="searchText" type="search" placeholder="search by keyword">
+  <input name="search" ng-model="searchText" type="search" placeholder="enter search criteria">
 </div>
 
+<!-- sort ads -->
 <div class="row">
   <h5>Sort Ads</h5>
   <button type="button" name="button" ng-click="$ctrl.updateSort('-date')">Sort By Date Posted</button>
   <button type="button" name="button" ng-click="$ctrl.updateSort('price')">Sort By Price</button>
 </div>
 
-
 <div ng-repeat="ad in $ctrl.ad | filter : searchText | orderBy : $ctrl.sortCriteria">
   <div class="row">
     <h3>{{ad.id}}: {{ad.title}}</h3>
     <h4>Price: {{ad.price}}</h4>
-    <span am-time-ago="post.date"></span>
+    <span am-time-ago="ad.date"></span>
     <h4>Description:</h4>
     <p>{{ad.description}}</p>
     <img ng-src="{{ad.item_image}}" alt="item-image">

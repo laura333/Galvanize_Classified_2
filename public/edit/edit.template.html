@@ -1,1 +1,29 @@
 <h3>This is the edit ad component.</h3>
+
+<div class="row">
+  <form class="" action="index.html" method="post">
+    <div>
+      <label for="title">Title</label>
+      <br>
+      <input type="text" name="title" value="" ng-model="$ctrl.selectedAd.title">
+    </div>
+    <div>
+      <label for="description">Description</label>
+      <br>
+      <input type="text" name="description" value="" ng-model="$ctrl.selectedAd.description">
+    </div>
+    <div>
+      <label for="price">Price</label>
+      <br>
+      <input type="text" name="price" value="" ng-model="$ctrl.selectedAd.price">
+    </div>
+    <div>
+      <label for="item_image">Item Image</label>
+      <br>
+      <input type="text" name="item_image" value="" ng-model="$ctrl.selectedAd.item_image">
+    </div>
+    <div class="">
+      <button type="button" name="button" ng-click="$ctrl.editAd()">Submit Changes</button>
+    </div>
+  </form>
+</div>
