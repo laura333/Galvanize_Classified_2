@@ -12,8 +12,17 @@
 
   function controller($http, $state, $stateParams) {
     const vm = this;
-    vm.$onInit = onInit;
+    // vm.$onInit = onInit;
     vm.createAd = createAd;
+    
+    // function onInit() {}
+
+    function createAd() {
+      $http.post('/classifieds', vm.newAd).then((result) => {
+        console.log(result);
+        $state.go('home');
+      });
+    }
   }
 
 }());
