@@ -21,7 +21,7 @@
 <div ng-repeat="ad in $ctrl.ads | filter : searchText | orderBy : $ctrl.sortCriteria">
   <div class="row">
     <h3>{{ad.id}}: {{ad.title}}</h3>
-    <h4>Price: {{ad.price}}</h4>
+    <h4>Price: ${{ad.price}}</h4>
     <span am-time-ago="ad.date"></span>
     <h4>Description:</h4>
     <p>{{ad.description}}</p>
